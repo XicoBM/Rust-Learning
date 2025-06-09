@@ -2,11 +2,15 @@
 
 Welcome to my Rust Learning Journey — a personal log and code archive as I explore the world of systems programming with Rust. This repository will grow alongside my knowledge, from basic syntax to advanced topics like concurrency, web development, and systems architecture.
 
+---
+
 🌟 Why Rust?
 
  - Memory safety without garbage collection
  - Zero-cost abstractions
  - Blazing-fast performance
+
+---
 
 📚 Learning Goals (VPN-Oriented)
 
