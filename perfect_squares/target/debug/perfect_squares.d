@@ -1,0 +1,1 @@
+C:\Users\kiko_\OneDrive\Ambiente\ de\ Trabalho\UNI\Codigo\RUST\Rust-Learning\perfect_squares\target\debug\perfect_squares.exe: C:\Users\kiko_\OneDrive\Ambiente\ de\ Trabalho\UNI\Codigo\RUST\Rust-Learning\perfect_squares\src\main.rs
