@@ -1,0 +1,1 @@
+C:\Users\kiko_\OneDrive\Ambiente\ de\ Trabalho\UNI\Codigo\RUST\Rust-Learning\programming-concepts\variables-and-mutability\target\debug\variables-and-mutability.exe: C:\Users\kiko_\OneDrive\Ambiente\ de\ Trabalho\UNI\Codigo\RUST\Rust-Learning\programming-concepts\variables-and-mutability\src\main.rs

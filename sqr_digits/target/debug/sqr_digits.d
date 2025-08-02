@@ -1,0 +1,1 @@
+C:\Users\kiko_\OneDrive\Ambiente\ de\ Trabalho\UNI\Codigo\RUST\Rust-Learning\sqr_digits\target\debug\sqr_digits.exe: C:\Users\kiko_\OneDrive\Ambiente\ de\ Trabalho\UNI\Codigo\RUST\Rust-Learning\sqr_digits\src\main.rs
