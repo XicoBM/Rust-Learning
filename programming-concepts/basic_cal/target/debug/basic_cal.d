@@ -1,0 +1,1 @@
+C:\Users\kiko_\OneDrive\Ambiente\ de\ Trabalho\UNI\Codigo\RUST\Rust-Learning\programming-concepts\basic_cal\target\debug\basic_cal.exe: C:\Users\kiko_\OneDrive\Ambiente\ de\ Trabalho\UNI\Codigo\RUST\Rust-Learning\programming-concepts\basic_cal\src\main.rs
