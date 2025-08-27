@@ -1,15 +1,32 @@
+/*
+This project is a simple calculator that takes input in the form of "a+b", "a-b", "a*b", or "a/b",
+where 'a' and 'b' are single-digit integers (0-9). It performs the specified arithmetic operation
+and outputs the result. The calculator handles basic error checking, such as ensuring that the input
+is in the correct format and that division by zero is avoided.
+*/
+
 use std::io;
 
 fn main() {
-    let mut calc_in = String::new();
-    io::stdin()
-        .read_line(&mut calc_in)
-        .expect("Failed to read line!");
+    loop {
+        let mut buffer = String::new();
 
-    let calc_in = calc_in.trim().chars();
+        let input = io::stdin()
+            .read_line(&mut buffer)
+            .expect("Failed to read line!");
 
-    let res: i64 = calc(calc_in);
-    println!("{}", res);
+        if input == 0 {
+            println!("Empty input, please provide the calculation intended.")
+        }
+
+        let buffer = buffer.trim();
+        if buffer.eq_ignore_ascii_case("exit") {
+            println!("Closing program...");
+            break;
+        }
+
+        println!("The result for '{}' is: {}", buffer, calc(buffer.chars()));
+    }
 }
 
 fn calc(input: impl Iterator<Item = char>) -> i64 {
