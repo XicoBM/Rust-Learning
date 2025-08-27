@@ -15,10 +15,6 @@ fn main() {
             .read_line(&mut buffer)
             .expect("Failed to read line!");
 
-        if input == 0 {
-            println!("Empty input, please provide the calculation intended.")
-        }
-
         let buffer = buffer.trim();
         if buffer.eq_ignore_ascii_case("exit") {
             println!("Closing program...");
