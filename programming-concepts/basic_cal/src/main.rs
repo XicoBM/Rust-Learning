@@ -54,23 +54,16 @@ fn calc(input: impl Iterator<Item = char>) -> usize {
     let mut elem1: String = "".to_string();
     let mut elem2: String = "".to_string();
     let mut operation: char = ' ';
-    let mut var_temp: usize = 0;
     let input: Vec<char> = input.collect();
 
     for n in 0..(input.len()) {
-        if input[n].to_digit(10) == None {
+        if !input[n].is_digit(10) {
             operation = input[n];
-            break;
+        } else if operation != ' ' {
+            elem2.push(input[n]);
+        } else {
+            elem1.push(input[n]);
         }
-        elem1.push(input[n]);
-        var_temp = n+2;
-    }
-
-    for nn in var_temp..(input.len()) {
-        if input[nn].to_digit(10) == None {
-            break;
-        }
-        elem2.push(input[nn]);
     }
 
     let elem1: usize = elem1.parse().unwrap();
