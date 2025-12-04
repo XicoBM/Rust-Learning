@@ -11,7 +11,7 @@ fn main() {
     loop {
         let mut buffer = String::new();
 
-        let input = io::stdin()
+        io::stdin()
             .read_line(&mut buffer)
             .expect("Failed to read line!");
 
@@ -24,27 +24,67 @@ fn main() {
         println!("The result for '{}' is: {}", buffer, calc(buffer.chars()));
     }
 }
-
-fn calc(input: impl Iterator<Item = char>) -> i64 {
+/*
+fn input_analysis (input: impl Iterator<Item = char>, index: u32) -> char {
     let chars: Vec<char> = input.collect();
 
     if chars.len() < 3 {
         return 0;
     }
 
-    let elem1 = chars[0].to_digit(10).unwrap_or(0) as i64;
-    let operation = chars[1];
-    let elem3 = chars[2].to_digit(10).unwrap_or(0) as i64;
+    let mut index = index;
+    let mut var_one: char = '';
+    let mut var_two: char = '';
+    let mut var = '';
+    loop {
+        var = chars[index].to_digit(10).unwrap_or(0);
+
+        if var == 0 {
+            return var_final;
+            break;
+        } else {
+            var_final = var_final.concat!(var);
+            index += 1;
+        }
+    }
+}
+*/
+
+fn calc(input: impl Iterator<Item = char>) -> usize {
+    let mut elem1: String = "".to_string();
+    let mut elem2: String = "".to_string();
+    let mut operation: char = ' ';
+    let mut var_temp: usize = 0;
+    let input: Vec<char> = input.collect();
+
+    for n in 0..(input.len()) {
+        if input[n].to_digit(10) == None {
+            operation = input[n];
+            break;
+        }
+        elem1.push(input[n]);
+        var_temp = n+2;
+    }
+
+    for nn in var_temp..(input.len()) {
+        if input[nn].to_digit(10) == None {
+            break;
+        }
+        elem2.push(input[nn]);
+    }
+
+    let elem1: usize = elem1.parse().unwrap();
+    let elem2: usize = elem2.parse().unwrap();
 
     match operation {
-        '*' => elem1 * elem3,
-        '+' => elem1 + elem3,
-        '-' => elem1 - elem3,
+        '*' => elem1 * elem2,
+        '+' => elem1 + elem2,
+        '-' => elem1 - elem2,
         '/' => {
-            if elem3 == 0 {
+            if elem2 == 0 {
                 0
             } else {
-                elem1 / elem3
+                elem1 / elem2
             }
         }
         _ => 0,
